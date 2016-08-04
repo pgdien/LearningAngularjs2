@@ -1,0 +1,184 @@
+﻿@model LearningAngularjs2.Models.Post
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUserCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUserCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idUserModified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUserModified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.timeCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timeCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.timeModified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timeModified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.published)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.version)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.version)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.featured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.featured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.metadescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.metadescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.metakewords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.metakewords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.robots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.robots)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

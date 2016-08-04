@@ -1,0 +1,154 @@
+﻿@model IEnumerable<LearningAngularjs2.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idCategoryProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUserCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idUserModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timeCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timeModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.published)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tags)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.version)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.feature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.metadescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.metakewords)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.robots)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCategoryProduct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUserCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUserModified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timeCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timeModified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.alias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.published)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tags)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.version)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.feature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.metadescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.metakewords)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.robots)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProduct }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProduct }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProduct })
+        </td>
+    </tr>
+}
+
+</table>
