@@ -5,132 +5,20 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div ng-app="myApp">
+    <div ng-controller="danhsachCategoryController">
+        <p>
+            <a href="@Url.Action("Create", "Categories")" class="btn ink-reaction btn-raised btn-primary"><span class="fa fa-plus"></span> Thêm</a>
+        </p>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.idCategoryParent)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idUserCreated)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idUserModified)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.timeCreated)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.timeModified)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.alias)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.note)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.published)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tags)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.version)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.deleted)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.metadescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.metakewords)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.robots)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.idCategoryParent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idUserCreated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idUserModified)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.timeCreated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.timeModified)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.alias)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.note)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.published)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tags)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.version)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.deleted)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.metadescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.metakewords)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.robots)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idCategory }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idCategory }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idCategory })
-        </td>
-    </tr>
-}
-
-</table>
+        <div class="card">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div ui-grid-selection ui-grid-pagination ui-grid-resize-columns ui-grid-move-columns ui-grid="gridOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

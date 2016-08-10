@@ -1,0 +1,466 @@
+﻿@font-face {
+    font-family: UVNKieu_B;
+    src: url('../fonts/UVNKieu_B.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: UVNKieu_R;
+    src: url('../fonts/UVNKieu_R.TTF') format('truetype');
+}
+
+/*Nội dung chính hiện thị trang san phẩm*/
+.Body > .NoiDungChinh {
+    position: static;
+    float: right;
+}
+
+    /*Trang chủ*/
+    /*Tin tức*/
+    .Body > .NoiDungChinh .TinTuc {
+    }
+
+        .Body > .NoiDungChinh .TinTuc > .TinMoi {
+            padding: 0;
+            border-right: solid 1px #fff;
+        }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi > .Anh {
+                width: 30%;
+                float: left;
+                border: solid 2px #fff;
+                border-radius: 4px;
+                margin-top: 0.5em;
+            }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi > .TieuDe {
+                width: 65%;
+                float: right;
+                color: #fff;
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .TieuDe:hover {
+                    color: #ff0000;
+                    text-decoration: none;
+                }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi > .NoiDung {
+                width: 65%;
+                float: right;
+                color: #fff;
+                text-align: justify;
+                padding-right: 1em;
+                font-size: 1em;
+            }
+
+        .Body > .NoiDungChinh .TinTuc > .DanhSach {
+        }
+
+            .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung {
+                position: static;
+                display: block;
+                color: #fff;
+                font-size: 1.1em;
+            }
+
+                .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung:hover {
+                    text-decoration: solid underline;
+                }
+
+                .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung > span {
+                    color: #ff0000;
+                    padding-right: 0.4em;
+                }
+
+    /*Thực đơn*/
+    .Body > .NoiDungChinh .ThucDon {
+        padding-bottom: 0.5em;
+    }
+
+        .Body > .NoiDungChinh .ThucDon > .TieuDe {
+            font-family: UVNKieu_B;
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            font-style: italic;
+            border-bottom: solid 1px #ff0000;
+        }
+
+        .Body > .NoiDungChinh .ThucDon > .MonAn {
+            padding: 1em;
+            height: auto;
+            -webkit-transition: .5s all;
+            -moz-transition: .5s all;
+        }
+
+            .Body > .NoiDungChinh .ThucDon > .MonAn:hover {
+                -webkit-transition-delay: 0s;
+                -moz-transition-delay: 0s;
+                background-color: #ff1a1a;
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn:hover .Gia {
+                    color: #fff;
+                }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn:hover a {
+                    text-decoration: none;
+                }
+
+            .Body > .NoiDungChinh .ThucDon > .MonAn img {
+                width: 100%;
+                height: 12em;
+            }
+
+            .Body > .NoiDungChinh .ThucDon > .MonAn .TenMon {
+                color: #fff;
+                font-size: 1.3em;
+                margin: 0;
+            }
+
+            .Body > .NoiDungChinh .ThucDon > .MonAn .Gia {
+                color: #ff1a1a;
+                font-size: 1.3em;
+            }
+
+    .Body > .NoiDungChinh .pagination {
+        text-align: center;
+    }
+
+        .Body > .NoiDungChinh .pagination > li {
+        }
+
+            .Body > .NoiDungChinh .pagination > li > a {
+                background-color: #000;
+                color: #ff0000;
+                border: 0;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+                .Body > .NoiDungChinh .pagination > li > a:hover {
+                    background-color: #ff0000;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+
+    .Body > .NoiDungChinh .ChiTietMonAn {
+    }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .TieuDe {
+            color: #fff;
+            font-family: UVNKieu_B;
+            font-size: 3em;
+            font-weight: bold;
+            border-bottom: solid 1px #ff0000;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .Anh {
+            float: left;
+            width: 40%;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet {
+            float: right;
+            width: 56%;
+        }
+
+            .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .TenMon {
+                color: #fff;
+                font-size: 2em;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .Gia {
+                font-size: 1.4em;
+                color: #ff0000;
+                border-bottom: dotted #ccc;
+            }
+
+            .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .NoiDung {
+                margin-top: 2em;
+                color: #fff;
+                font-size: 1.3em;
+                margin: 0;
+            }
+
+/* Small devices (phone, <768px) */
+@media (max-width: 767px) {
+    /*Nội dung chính hiện thị trang san phẩm*/
+    .Body > .NoiDungChinh {
+        padding: 0 0.1em 0 0.1em;
+    }
+
+        /*Trang chủ*/
+        /*Tin tức*/
+        .Body > .NoiDungChinh .TinTuc {
+            padding: 0;
+        }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi {
+                padding: 0;
+            }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .Anh {
+                    margin-top: 0.5em;
+                }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .TieuDe {
+                    font-size: 0.6em;
+                    font-weight: bold;
+                }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .NoiDung {
+                    padding-right: 0.1em;
+                    font-size: 0.4em;
+                }
+
+            .Body > .NoiDungChinh .TinTuc > .DanhSach {
+                padding: 0 0.1em 0 0.1em;
+            }
+
+                .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung {
+                    font-size: 0.6em;
+                }
+
+                    .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung > span {
+                        padding-right: 0.4em;
+                    }
+
+        /*Thực đơn*/
+        .Body > .NoiDungChinh .ThucDon {
+            padding: 0.1em;
+        }
+
+            .Body > .NoiDungChinh .ThucDon > .TieuDe {
+                font-size: 1.5em;
+            }
+
+            .Body > .NoiDungChinh .ThucDon > .MonAn {
+                padding: 0.1em;
+                height: 8em;
+            }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn .TenMon {
+                    font-size: 0.7em;
+                    margin: 0;
+                }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn .Gia {
+                    font-size: 0.65em;
+                }
+
+        .Body > .NoiDungChinh .pagination > li > a {
+            font-size: 1.1em;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .TieuDe {
+            font-size: 3em;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .TenMon {
+            font-size: 0.8em;
+            margin: 0;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .Gia {
+            font-size: 0.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .NoiDung {
+            margin-top: 1em;
+            font-size: 0.5em;
+            margin: 0;
+        }
+
+        .Body > .NoiDungChinh .ThucDon > .MonAn img {
+            width: 100%;
+            height: 4.5em;
+        }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 767px) and (max-width: 992px) {
+    /*Trang chủ*/
+    /*Tin tức*/
+    .Body > .NoiDungChinh .TinTuc {
+        padding-right: 0;
+    }
+
+        .Body > .NoiDungChinh .TinTuc > .TinMoi {
+            padding: 0;
+        }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi > .Anh {
+                margin-top: 0.5em;
+            }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi > .TieuDe {
+                font-size: 1.1em;
+            }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi > .NoiDung {
+                padding-right: 0.5em;
+                font-size: 0.8em;
+            }
+
+        .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung {
+            font-size: 1em;
+        }
+
+            .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung > span {
+                padding-right: 0.2em;
+            }
+
+    /*Thực đơn*/
+    .Body > .NoiDungChinh .ThucDon > .TieuDe {
+        font-size: 2.5em;
+    }
+
+    .Body > .NoiDungChinh .ThucDon > .MonAn {
+        padding: 1em;
+        height: 180px;
+    }
+
+        .Body > .NoiDungChinh .ThucDon > .MonAn .TenMon {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .Body > .NoiDungChinh .ThucDon > .MonAn .Gia {
+            font-size: 1.2em;
+        }
+
+        .Body > .NoiDungChinh .ThucDon > .MonAn img {
+            width: 100%;
+            height: 7em;
+        }
+
+    .Body > .NoiDungChinh .pagination > li > a {
+        font-size: 1.1em;
+    }
+
+        .Body > .NoiDungChinh .pagination > li > a:hover {
+            border-radius: 5px;
+        }
+
+    /*Chi tiết món ăn*/
+    .Body > .NoiDungChinh .ChiTietMonAn > .TieuDe {
+        font-size: 3em;
+    }
+
+    .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .TenMon {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .Gia {
+        font-size: 1.4em;
+    }
+
+    .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .NoiDung {
+        margin-top: 2em;
+        font-size: 1.3em;
+        margin: 0;
+    }
+}
+
+@media (min-width: 2000px) {
+    /*Nội dung chính hiện thị trang san phẩm*/
+    .Body > .NoiDungChinh {
+        padding: 0 0.1em 0 0.1em;
+    }
+
+        /*Trang chủ*/
+        /*Tin tức*/
+        .Body > .NoiDungChinh .TinTuc {
+            padding: 0;
+        }
+
+            .Body > .NoiDungChinh .TinTuc > .TinMoi {
+                padding: 0;
+            }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .Anh {
+                    margin-top: 0.5em;
+                }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .TieuDe {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+
+                .Body > .NoiDungChinh .TinTuc > .TinMoi > .NoiDung {
+                    padding-right: 1em;
+                    font-size: 1.8em;
+                }
+
+            .Body > .NoiDungChinh .TinTuc > .DanhSach {
+                padding: 0 0.1em 0 0.1em;
+            }
+
+                .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung {
+                    font-size: 2em;
+                }
+
+                    .Body > .NoiDungChinh .TinTuc > .DanhSach > .NoiDung > span {
+                        padding-right: 0.4em;
+                    }
+
+        /*Thực đơn*/
+        .Body > .NoiDungChinh .ThucDon {
+            padding: 1em;
+        }
+
+            .Body > .NoiDungChinh .ThucDon > .TieuDe {
+                font-size: 5em;
+            }
+
+            .Body > .NoiDungChinh .ThucDon > .MonAn {
+                padding: 1.5em;
+                height: auto;
+            }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn .TenMon {
+                    font-size: 3em;
+                    margin: 0;
+                }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn .Gia {
+                    font-size: 3em;
+                }
+
+                .Body > .NoiDungChinh .ThucDon > .MonAn img {
+                    width: 100%;
+                    height: 25em;
+                }
+
+        .Body > .NoiDungChinh .pagination > li > a {
+            font-size: 1.1em;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .TieuDe {
+            font-size: 4em;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .TenMon {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .Gia {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .Body > .NoiDungChinh .ChiTietMonAn > .ChiTiet > .NoiDung {
+            margin-top: 2.8em;
+            font-size: 3.5em;
+            margin: 0;
+        }
+}

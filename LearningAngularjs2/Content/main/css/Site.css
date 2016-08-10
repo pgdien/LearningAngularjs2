@@ -1,0 +1,650 @@
+﻿/*<<<<<<< HEAD*/
+/*Post*/
+child-post {
+    margin: 20px 0;
+    height: 180px;
+}
+
+.child-post .title-child-post {
+    float: left;
+    width: 25%;
+}
+
+.child-post .text {
+    float: left;
+    width: 70%;
+    margin-left: 15px;
+}
+
+    .child-post .text a {
+        font-size: 1.4em;
+        color: #3a3a3a;
+    }
+
+        .child-post .text a:hover {
+            color: #0a47ba;
+        }
+
+.child-post .description {
+    line-height: 22px;
+}
+
+@font-face {
+    font-family: UVNKieu_B;
+    src: url('../fonts/UVNKieu_B.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: UVNKieu_R;
+    src: url('../fonts/UVNKieu_R.TTF') format('truetype');
+}
+
+body {
+    background-color: #000;
+    font-family: Arial;
+}
+
+/*header*/
+.Header {
+    padding: 0;
+}
+
+    .Header > .TopHeader {
+    }
+
+        .Header > .TopHeader > .Text {
+            position: static;
+            float: right;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.1em;
+            padding-right: 3em;
+            padding-top: 0.6em;
+        }
+
+    .Header > .MidHeader {
+        padding: 0 0 0.8em 0;
+    }
+
+        .Header > .MidHeader > .Logo {
+            padding-left: 3em;
+        }
+
+        .Header > .MidHeader > .MenuBar {
+            padding: 0.7em 0 0 5em;
+        }
+
+            .Header > .MidHeader > .MenuBar > .navbar-inverse {
+                margin: 0;
+                border: 0;
+            }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid {
+                    background-color: #000;
+                }
+
+                    .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-header {
+                    }
+
+                    .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-collapse {
+                    }
+
+                    .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav {
+                    }
+
+                        .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li {
+                            position: static;
+                        }
+
+                            .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > a {
+                                color: #ff0000;
+                                font-size: 1.5em;
+                                font-weight: bold;
+                            }
+
+                                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > a:hover {
+                                    color: #fff;
+                                }
+
+                            .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > input {
+                                font-size: 1.5em;
+                                margin-top: 0.4em;
+                                border-radius: 30px;
+                            }
+
+                            .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > button {
+                                margin-top: -1.6em;
+                                float: right;
+                                background-color: transparent;
+                                border: 0;
+                                font-size: 1.5em;
+                                color: #000;
+                                position: relative;
+                            }
+
+                                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > button:hover {
+                                    color: #ff0000;
+                                }
+
+.Body {
+    padding: 0;
+}
+
+    /*Banner*/
+    .Body > .Banner {
+        padding: 0;
+        margin-bottom: 1em;
+    }
+
+        .Body > .Banner > .slide {
+        }
+
+            .Body > .Banner > .slide > .carousel-indicators {
+                bottom: -0.65em;
+                text-align: center;
+                left: auto;
+                right: 0;
+                width: 10em;
+                height: 2em;
+            }
+
+    /*menu trái*/
+    .Body > .MenuTrai {
+        padding: 0 3em 0 3em;
+        position: static;
+        float: left;
+        margin-bottom: 0.5em;
+    }
+
+        .Body > .MenuTrai > .nav-pills {
+            font-family: UVNKieu_B;
+        }
+
+            .Body > .MenuTrai > .nav-pills > .TieuDe {
+                text-align: center;
+            }
+
+                .Body > .MenuTrai > .nav-pills > .TieuDe > img {
+                    position: absolute;
+                    width: 100%;
+                }
+
+                .Body > .MenuTrai > .nav-pills > .TieuDe > p {
+                    font-size: 3em;
+                    color: #fff;
+                    font-weight: bold;
+                    margin: 0;
+                    font-style: italic;
+                }
+
+            .Body > .MenuTrai > .nav-pills > .DanhSach {
+                text-align: center;
+                border-bottom: solid 1px #ccc;
+            }
+
+                .Body > .MenuTrai > .nav-pills > .DanhSach > a {
+                    font-size: 2em;
+                    color: #fff;
+                    padding-top: 0;
+                }
+
+                    .Body > .MenuTrai > .nav-pills > .DanhSach > a:hover {
+                        background-color: #000;
+                        color: #ff0000;
+                    }
+
+
+
+
+/*footer*/
+.Footer {
+    padding-top: 3em;
+}
+
+    .Footer > .ThongTin {
+        color: #fff;
+    }
+
+        .Footer > .ThongTin > .TenNhaHang {
+            font-size: 1.8em;
+            margin: 0;
+        }
+
+        .Footer > .ThongTin > .DiaChi {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+    .Footer > .MenuDuoi {
+        right: 0px;
+    }
+
+        .Footer > .MenuDuoi > .navbar-inverse {
+            background-color: #000;
+            margin: 0;
+        }
+
+            .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav {
+                width: 100%;
+            }
+
+                .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li {
+                    padding: 0;
+                }
+
+                    .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li > a {
+                        color: #fff;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                    }
+
+                        .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li > a:hover {
+                            color: #ff0000;
+                        }
+
+    .Footer >.MenuDuoi > .MangXH {
+        padding-right: 3em;
+    }
+
+        .Footer >.MenuDuoi > .MangXH > img {
+            display: inline;
+            position: static;
+            float: right;
+            padding-right: 2em;
+        }
+
+        /*Nhúng facebook*/
+    .Footer > .NhungFB {
+        position: static;
+        float: left;
+        padding: 0;
+        display: block;
+        height:14em;
+    }
+
+/* Small devices (phone, <768px) */
+@media (max-width: 767px) {
+    /*header*/
+    .Header {
+        padding: 0;
+    }
+
+        .Header > .TopHeader > .Text {
+            font-size: 0.8em;
+            padding-top: 0.5em;
+        }
+
+        .Header > .MidHeader {
+            padding: 0 0 0.4em 0;
+        }
+
+            .Header > .MidHeader > .MenuBar {
+                padding: 0;
+            }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse {
+                    margin: 0;
+                }
+
+                    .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > a {
+                        font-size: 1em;
+                        padding: 0.5em;
+                    }
+
+                    .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > input {
+                        font-size: 1.5em;
+                        margin-top: 0.4em;
+                        border-radius: 30px;
+                    }
+
+                    .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > button {
+                        margin-top: -1.6em;
+                        border: 0;
+                        font-size: 1.5em;
+                    }
+
+    .Body {
+        padding: 0;
+    }
+
+        /*Banner*/
+        .Body > .Banner {
+            padding: 0;
+        }
+
+            .Body > .Banner > .slide {
+            }
+
+                .Body > .Banner > .slide > .carousel-indicators {
+                    width: 10em;
+                    height: 2em;
+                    padding-top: 0.5em;
+                }
+
+        /*menu trái*/
+        .Body > .MenuTrai {
+            padding: 0;
+        }
+
+            .Body > .MenuTrai > .nav-pills > .TieuDe > p {
+                font-size: 1.5em;
+                margin: 0;
+            }
+
+            .Body > .MenuTrai > .nav-pills > .DanhSach > a {
+                font-size: 1.2em;
+                padding-top: 0;
+            }
+
+        /*Nhúng facebook*/
+        .Body > .NhungFB {
+            padding: 0;
+            height: 10em;
+        }
+
+
+    /*footer*/
+    .Footer {
+        padding: 1em 0 0 0;
+    }
+
+        .Footer > .ThongTin {
+            padding: 0;
+        }
+
+            .Footer > .ThongTin > .TenNhaHang {
+                font-size: 0.7em;
+                margin: 0;
+            }
+
+            .Footer > .ThongTin > .DiaChi {
+                font-size: 0.5em;
+                margin: 0;
+            }
+
+        .Footer > .MenuDuoi {
+            padding: 0;
+        }
+
+            .Footer > .MenuDuoi > .navbar-inverse {
+                margin: 0;
+            }
+
+                .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                    .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li {
+                        padding: 0 0.1em 0 0.1em;
+                    }
+
+                        .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li > a {
+                            font-size: 0.6em;
+                            padding: 0 0.1em 0 0.1em;
+                        }
+
+        .Footer >.MenuDuoi > .MangXH {
+            padding: 0;
+        }
+
+            .Footer >.MenuDuoi > .MangXH > img {
+                padding-right: 2em;
+            }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 767px) and (max-width: 992px) {
+    /*header*/
+    .Header {
+        padding: 0;
+    }
+
+        .Header > .TopHeader > .Text {
+            font-size: 1.1em;
+            padding-right: 3em;
+            padding-top: 0.8em;
+        }
+
+        .Header > .MidHeader {
+            padding: 0 0 0.4em 0;
+        }
+
+            .Header > .MidHeader > .Logo {
+                padding-left: 3em;
+            }
+
+            .Header > .MidHeader > .MenuBar > .navbar-inverse {
+                margin: 0;
+                border: 0;
+            }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > a {
+                    font-size: 1.3em;
+                    font-weight: bold;
+                }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > input {
+                    font-size: 1em;
+                    border-radius: 30px;
+                }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > button {
+                    margin-top: -1.6em;
+                    font-size: 1.5em;
+                    color: #000;
+                }
+
+    .Body {
+        padding: 0;
+    }
+
+        /*Banner*/
+        .Body > .Banner {
+            padding: 0;
+        }
+
+            .Body > .Banner > .slide > .carousel-indicators {
+                width: 10em;
+                height: 2em;
+                bottom: -0.6em;
+            }
+
+        /*menu trái*/
+        .Body > .MenuTrai {
+            padding: 0 1em 0 1em;
+        }
+
+            .Body > .MenuTrai > .nav-pills > .TieuDe > p {
+                font-size: 2.5em;
+                margin: 0;
+            }
+
+            .Body > .MenuTrai > .nav-pills > .DanhSach {
+                border-bottom: solid 1px #ccc;
+            }
+
+                .Body > .MenuTrai > .nav-pills > .DanhSach > a {
+                    font-size: 1.7em;
+                    padding-top: 0;
+                }
+
+        /*Nhúng facebook*/
+        .Body > .NhungFB {
+            padding-right: 0;
+            height: 18em;
+        }
+
+
+    /*footer*/
+    .Footer {
+        padding-top: 2em;
+    }
+
+        .Footer > .ThongTin {
+            padding: 0;
+        }
+
+            .Footer > .ThongTin > .TenNhaHang {
+                font-size: 1.4em;
+                margin: 0;
+            }
+
+            .Footer > .ThongTin > .DiaChi {
+                font-size: 1em;
+                margin: 0;
+            }
+
+        .Footer > .MenuDuoi > .navbar-inverse {
+            margin: 0;
+        }
+
+            .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav {
+                width: 100%;
+            }
+
+                .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li {
+                    padding: 0;
+                }
+
+                    .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li > a {
+                        font-size: 1.2em;
+                        padding: 0.8em 0.1em 0.8em 0.1em;
+                    }
+
+        .Footer >.MenuDuoi > .MangXH {
+            padding-right: 1em;
+        }
+
+            .Footer >.MenuDuoi > .MangXH > img {
+                padding-right: 2em;
+            }
+}
+
+@media (min-width: 2000px){
+     /*header*/
+    .Header {
+        padding: 0;
+    }
+
+        .Header > .TopHeader > .Text {
+            font-size: 2em;
+            padding-right: 3em;
+            padding-top: 0.8em;
+        }
+
+        .Header > .MidHeader {
+            padding: 0 0 0.4em 0;
+        }
+
+            .Header > .MidHeader > .Logo {
+                padding-left: 3em;
+            }
+
+            .Header > .MidHeader > .MenuBar > .navbar-inverse {
+                margin: 0;
+                border: 0;
+            }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > a {
+                    font-size: 3.5em;
+                    font-weight: bold;
+                    padding-left:1em;
+                }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > input {
+                    font-size: 2em;
+                    border-radius: 30px;
+                }
+
+                .Header > .MidHeader > .MenuBar > .navbar-inverse > .container-fluid > .navbar-nav > li > button {
+                    margin-top: -1.6em;
+                    font-size: 1.5em;
+                    color: #000;
+                }
+
+    .Body {
+        padding: 0;
+    }
+
+        /*Banner*/
+        .Body > .Banner {
+            padding: 0;
+        }
+
+            .Body > .Banner > .slide > .carousel-indicators {
+                width: 10em;
+                height: 2em;
+                bottom: -0.6em;
+            }
+
+        /*menu trái*/
+        .Body > .MenuTrai {
+            padding: 0 1em 0 1em;
+        }
+
+            .Body > .MenuTrai > .nav-pills > .TieuDe > p {
+                font-size: 6em;
+                margin: 0;
+            }
+
+            .Body > .MenuTrai > .nav-pills > .DanhSach {
+                border-bottom: solid 1px #ccc;
+            }
+
+                .Body > .MenuTrai > .nav-pills > .DanhSach > a {
+                    font-size: 4em;
+                    padding-top: 0;
+                }
+
+        /*Nhúng facebook*/
+        .Body > .NhungFB {
+            padding-right: 0;
+            height: 18em;
+        }
+
+
+    /*footer*/
+    .Footer {
+        padding-top: 2em;
+    }
+
+        .Footer > .ThongTin {
+            padding: 0;
+        }
+
+            .Footer > .ThongTin > .TenNhaHang {
+                font-size: 3em;
+                margin: 0;
+            }
+
+            .Footer > .ThongTin > .DiaChi {
+                font-size: 2em;
+                margin: 0;
+            }
+
+        .Footer > .MenuDuoi > .navbar-inverse {
+            margin: 0;
+        }
+
+            .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav {
+                width: 100%;
+            }
+
+                .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li {
+                    padding: 0;
+                }
+
+                    .Footer > .MenuDuoi > .navbar-inverse > .navbar-nav > li > a {
+                        font-size: 2.5em;
+                        padding: 0.8em 0.1em 0.8em 0.1em;
+                    }
+
+        .Footer >.MenuDuoi > .MangXH {
+            padding-right: 1em;
+        }
+
+            .Footer >.MenuDuoi > .MangXH > img {
+                padding-right: 2em;
+            }
+}

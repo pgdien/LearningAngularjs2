@@ -5,168 +5,198 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Category</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.idCategoryParent, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.idCategoryParent, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.idCategoryParent, "", new { @class = "text-danger" })
+<div ng-app="myApp">
+    <div ng-controller="themCategoryController">
+        <input type="hidden" value="@WebSecurity.CurrentUserName" id="user" />
+        <div class="row">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-block btn-sm ink-reaction btn-success" ng-click="saveCategory()"><span class="fa fa-edit"></span> Lưu</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-block btn-sm ink-reaction btn-info" ng-click="saveCategoryAndExit()"><span class="fa fa-check-square-o"></span> Lưu & Thoát</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-block btn-sm ink-reaction btn-info" ng-click="saveCategoryAndNew()"><span class="fa fa-plus"></span> Lưu & Thêm mới</button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-block btn-sm ink-reaction btn-danger" ng-click="cancel()"><span class="fa fa-remove"></span> Hủy bỏ</button>
             </div>
         </div>
+        <hr class="ruler-lg" />
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.idUserCreated, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.idUserCreated, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.idUserCreated, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <div class="card">
+            <div class="card-body">
+                <form class="form" role="form">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group  " ng-class="{'has-error':!category.title, 'has-success':category.title}">
+                                <input type="text" class="form-control" id="title" name="title" ng-model="category.title" ng-change="changeTitle()">
+                                <label for="title">Tiêu đề *</label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="alias" ng-model="category.alias" name="alias" readonly>
+                                <label for="alias">Alias</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.idUserModified, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.idUserModified, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.idUserModified, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="row">
+                    <div class="card-head">
+                        <ul class="nav nav-tabs" data-toggle="tabs">
+                            <li class="active"><a href="#danhmuc">Danh mục</a></li>
+                            <li class=""><a href="#xuatban">Xuất bản</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-body tab-content">
+                        <div class="tab-pane active" id="danhmuc">
+                            <div class="col-md-9">
+                                <form class="form" role="form">
+                                    <div class="form-group ">
+                                        <textarea name="description" id="description" class="form-control" rows="3" placeholder="" ng-model="category.description"></textarea>
+                                        <label for="description">Mô tả</label>
+                                    </div>
+                                    @*<div class="form-group">
+                                            <input type="text" name="image" id="image" ng-model="category.image" class="form-control" /> <button class="btn btn-primary" ng-click="chooseImage()">Chọn ảnh</button>
+                                            <label for="image">Hình ảnh</label>
+                                            <img class="img-responsive" src="{{category.image}}" ng-show="category.image" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="image_banner" id="image_banner" ng-model="category.image_banner" class="form-control" /> <button class="btn btn-primary" ng-click="chooseImageBanner()">Chọn ảnh</button>
+                                            <label for="image">Hình ảnh Banner</label>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <input type="color" class="form-control" ng-model="category.color_background_banner">
+                                            <label>Màu nền Banner</label>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <input type="color" class="form-control" ng-model="category.color_title_banner">
+                                            <label>Màu chữ tiêu đề Banner</label>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <input type="color" class="form-control" ng-model="category.color_text_banner">
+                                            <label>Màu chữ Banner</label>
+                                        </div>*@
+                                </form>
+                            </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.timeCreated, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.timeCreated, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.timeCreated, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                            <div class="col-md-3">
+                                <form class="form" role="form">
+                                    <div class="form-group ">
+                                        <select id="idCategoryParent" name="idCategoryParent"
+                                                ng-model="categoryParent"
+                                                ng-options="categoryParent.name for categoryParent in categoryParents track by categoryParent.id"
+                                                class="form-control"></select>
+                                        <label for="idCategoryParent">Danh mục cha</label>
+                                    </div>
+                                    <div class="form-group ">
+                                        <select id="status" name="published" class="form-control" ng-model="category.published">
+                                            <option value="1" ng-selected="category.published == 1">Xuất bản</option>
+                                            <option value="0" ng-selected="category.published == 0">Không xuất bản</option>
+                                        </select>
+                                        <label for="status">Trạng thái</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="tags" name="tags" ng-model="category.tags" />
+                                        <label for="tags">Tags</label>
+                                    </div>
+                                    <div class="form-group ">
+                                        <textarea name="note" id="note" class="form-control" rows="3" placeholder="" ng-model="category.note"></textarea>
+                                        <label for="note">Ghi chú</label>
+                                    </div>
+                                </form>
+                            </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.timeModified, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.timeModified, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.timeModified, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                            <!--Demo Banner-->
+                            @*<div class="col-md-12">
+                                    <div class="banner">
+                                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="item banner-child active" style="background-image: url({{category.image_banner}}); background-color: {{category.color_background_banner}}; ">
+                                                    <div class="banner-child-content">
+                                                        <div class="banner-child-title" style="color: {{category.color_title_banner}}">{{category.title}}</div>
+                                                        <div class="banner-child-des" style="color: {{category.color_text_banner}}">{{category.description}}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>*@
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.alias, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.alias, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.alias, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.note, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.note, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.note, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.published, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.published, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.published, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.image, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.image, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.tags, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.tags, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.tags, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.version, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.version, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.version, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.deleted, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.deleted, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.deleted, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.metadescription, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.metadescription, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.metadescription, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.metakewords, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.metakewords, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.metakewords, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.author, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.author, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.author, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.robots, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.robots, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.robots, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                        <div class="tab-pane" id="xuatban">
+                            <form class="form" role="form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-user fa-lg"></span></span>
+                                            <div class="input-group-content">
+                                                <input type="text" class="form-control" id="idUserCreated" ng-model="category.idUserCreated" name="idUserCreated" readonly>
+                                                <label for="idUserCreated">Người tạo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar fa-lg"></span></span>
+                                            <div class="input-group-content">
+                                                <input type="text" class="form-control" id="timeCreated" ng-model="category.timeCreated | date:'HH:mm:ss dd-MM-yyyy'" name="timeCreated" readonly>
+                                                <label for="timeCreated">Ngày tạo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-user fa-lg"></span></span>
+                                            <div class="input-group-content">
+                                                <input type="text" class="form-control" id="idUserModified" ng-model="category.idUserModified" name="idUserModified" readonly>
+                                                <label for="idUserModified">Người sửa</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar fa-lg"></span></span>
+                                            <div class="input-group-content">
+                                                <input type="text" class="form-control" id="timeModified" ng-model="category.timeModified | date:'HH:mm:ss dd-MM-yyyy'" name="timeModified" readonly>
+                                                <label for="timeModified">Ngày sửa</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <textarea name="metadescription" id="metadescription" class="form-control" rows="3" placeholder="" ng-model="category.metadescription"></textarea>
+                                        <label for="metadescription">Thẻ mô tả</label>
+                                    </div>
+                                    <div class="form-group ">
+                                        <textarea name="metakewords" id="metakewords" class="form-control" rows="3" placeholder="" ng-model="category.metakewords"></textarea>
+                                        <label for="metakewords">Thẻ từ khóa</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" value="" id="author" class="form-control" name="author" ng-model="category.author" />
+                                        <label for="author">Tác giả</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <select id="robots" name="robots" class="form-control" ng-model="category.robots">
+                                            <option value="Index, Follow" ng-selected="category.robots == 'Index, Follow'">Index, Follow</option>
+                                            <option value="No index, Follow" ng-selected="category.robots == 'No index, Follow'">No index, Follow</option>
+                                            <option value="Index, No follow" ng-selected="category.robots == 'Index, No follow'">Index, No follow</option>
+                                            <option value="No index, No follow" ng-selected="category.robots == 'No index, No follow'">No index, No follow</option>
+                                        </select>
+                                        <label for="robots">Robots</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
+
+<!--Color picker-->
+<script src="~/Content/admin/js/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
